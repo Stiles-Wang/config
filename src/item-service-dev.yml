@@ -1,0 +1,23 @@
+# 应用名称
+spring:
+  application:
+    name: item-service
+# 应用服务 WEB 访问端口
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+
+---
+server:
+  port: 8001
+spring:
+  profiles: item1
+---
+server:
+  port: 8002
+spring:
+  profiles: item2
